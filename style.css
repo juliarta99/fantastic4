@@ -235,7 +235,6 @@ span{
 
 /* myschool */
 #myschool{
-      min-height: 100vh;
       width: 100%;
       margin: auto;
       background-color: #eee;
@@ -271,7 +270,7 @@ a{
 }
 .deskripsi_school{
       color: black;
-      margin: 0 20px;
+      margin: 0 20px 50px 20px;
       opacity: 1;
       transition: .3s;
 }
@@ -413,7 +412,7 @@ input{
             color: black;
             text-align: justify;
             font-size: .8rem;
-            margin: 0 15px;
+            margin: 0 15px 50px 15px;
             opacity: 1;
             transition: .3s;
       }
