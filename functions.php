@@ -2,7 +2,7 @@
 // koneksi ke database
 $conn = mysqli_connect("localhost", "root", "", "kelompok");
 
-// funcionts registrasi
+// funcionts comment
 function comment($data) {
       global $conn;
 
@@ -10,10 +10,10 @@ function comment($data) {
       $email = mysqli_real_escape_string($conn, $data["email"]);
       $comment = mysqli_real_escape_string($conn, $data["comment"]);
 
-      // tambahkan user baru ke database
+      // tambahkan data ke database
       mysqli_query($conn, "INSERT INTO comment VALUES('', '$nama', '$email', '$comment')");
 
       return mysqli_affected_rows($conn);
-      // register end
+      // comment end
 }
 ?>
