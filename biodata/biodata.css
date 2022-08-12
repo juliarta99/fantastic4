@@ -9,7 +9,7 @@ body{
       background-color: #eee;
 }
 :root{
-      --gradient: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      --gradient: linear-gradient(160deg, #0093E9 0%, #3b3e3d 100%);
 }
 
 /* navbar start */
@@ -100,15 +100,15 @@ a.option-profile{
       border: 3px solid #ddd;
       position: absolute;
       top: 0;
-      margin: 120px 87vh;
+      margin: 8% 42.5%;
 }
 
 /* isi content and medsos */
 .container{
       background-color: #fff;
-      width: 800px;
       padding: 150px 10px 20px 10px;
       margin: auto;
+      margin: 0 15%;
       text-align: center;
       border-radius: 0 0 8px 8px;
 }
@@ -151,10 +151,10 @@ a.option-profile{
       margin-bottom: 20px;
       background-image: var(--gradient);
       border-radius: 10px;
-      background-size: 200%;
+      background-size: 300%;
 }
 .table-pendidikan:hover{
-      animation: animasi-gradient 10s infinite alternate;
+      animation: animasi-gradient 3s infinite alternate;
 }
 thead tr th{
       padding: 20px 80px;
@@ -203,5 +203,46 @@ tbody tr td{
       }
       100%{
             background-position: right;
+      }
+}
+
+@media  screen and (max-width:1120px) {
+      .title{
+            font-size: 18px;
+      }
+      .img-content{
+            margin: 12% 42.5%;
+      }
+      thead tr th{
+            padding: 8px;
+            font-size: 25px;
+      }
+      tbody tr th{
+            padding: 7px;
+            font-size: 15px;
+      }
+      tbody tr td{
+            font-size: 12px;
+      }
+}
+@media  screen and (max-width:750px) {
+      .img-content{
+            margin: 20% 37%;
+      }
+      thead tr th{
+            padding: 5px;
+            font-size: 20px;
+      }
+      tbody tr th{
+            padding: 7px;
+            font-size: 15px;
+      }
+      tbody tr td{
+            font-size: 10px;
+      }
+}
+@media  screen and (max-width:550px) {
+      .img-content{
+            margin: 20% 31%;
       }
 }

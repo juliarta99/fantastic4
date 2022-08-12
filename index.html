@@ -1,17 +1,3 @@
-<?php
-require 'functions.php';
-
-if (isset ($_POST ["submit"]))
-
-      if( comment($_POST) > 0 ) {
-            echo "<script>
-                        alert('Pesan telah terkirim!')
-                  </script>";
-      } else {
-            echo mysqli_error($conn);
-      }
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +36,7 @@ if (isset ($_POST ["submit"]))
                   <img src="img/backgound.png" class="foto-bersama" alt="">
                   <div class="deskripsi">
                   <h1 class="nama">Fantastic4</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consequatur recusandae nisi autem ut, blanditiis facilis? Officia iure animi reiciendis necessitatibus praesentium, ex mollitia culpa? Sed adipisci numquam dolores laboriosam?</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni corporis hic repellat eaque sit. Error quibusdam accusantium voluptatibus nesciunt, sequi eius blanditiis at quos delectus nulla hic quam natus?</p>
                   </div>
             </div>
       </section>
@@ -131,7 +117,8 @@ if (isset ($_POST ["submit"]))
             <button type="submit" name="submit" id="submit" value="submit">Submit</button>
       </form>
       </div>
-      
+      <!-- contact end -->
+
       <!-- copyrigt start -->
       <footer id="copyright">
             <div class="copyright_content">
