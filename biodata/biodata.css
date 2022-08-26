@@ -85,11 +85,14 @@ a.option-profile{
 .nama{
       font-size: 1.5rem;
       color: #ccc;
+      animation: 1s ease-in-out animasi-nama;
 }
 .motto{
       font-size: .7rem;
       color: #ddd;
       margin-top: 0px;
+      animation: 1s ease-in-out animasi-nama;
+      animation-delay: .5s;
 }
 
 /* foto */
@@ -103,6 +106,7 @@ a.option-profile{
       right: 0;
       left: 0;
       top: 18vh;
+      animation: 1.5s ease-in-out animasi-foto;
 }
 
 /* isi content and medsos */
@@ -208,6 +212,22 @@ tbody tr td{
 }
 .copyright_content{
       color: white;
+}
+@keyframes animasi-nama{
+      0%{
+           transform: translateY(-100%);
+      }
+      100%{
+            transform: translateY(0%);
+      }
+}
+@keyframes animasi-foto{
+      0%{
+           transform: scale(0);
+      }
+      100%{
+            transform: scale(1);
+      }
 }
 @keyframes animasi-gradient {
       0%{

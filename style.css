@@ -75,10 +75,12 @@ nav{
       padding: 5px;
       color: var(--tiga-color);
 }
-img#mode{
+#mode{
       align-items: center;
-      margin-top: 5px;
-      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      margin-top: 7px;
+      margin-right: 20px;
       cursor: pointer;
 }
 .humberger{
@@ -93,7 +95,7 @@ img#mode{
 }
 .humberger span{
       display: block;
-      background-color: var(--dua-color);
+      background-color: white;
       width: 30px;
       height: 3px;
       border-radius: 5px;
@@ -344,14 +346,12 @@ form{
       margin-top: 30px;
       font-size: 15px;
 }
-input{
+input,
+textarea{
       padding: 7px;
       margin-top: 8px;
       border-radius: 5px;
       border: 0;
-}
-.isi-comment{
-      height: 80px;
 }
 #submit{
       width: 150px;
@@ -399,6 +399,15 @@ input{
       }
 }
 @media  screen and (max-width:576px) {
+      .img_content,
+      .card{
+            width: 160px;
+            height: 160px;
+      }
+      .foto-bersama{
+            width: 300px;
+            height: 190px;
+      }
       .menu ul{
             display: flex;
             flex-direction: column;
@@ -410,6 +419,7 @@ input{
             height: auto;
             text-align: center;
             transform: translateX(100%);
+            background-color: var(--satu-color);
             border-radius: 0 0 8px 8px;
             transition: all 1s;
             opacity: 0;
