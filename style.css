@@ -6,6 +6,23 @@ body{
       font-family: sans-serif;
       overflow-x: hidden;
 }
+:root{
+      --satu-color:rgb(127, 171, 243);
+      --dua-color:white;
+      --tiga-color:#ddd;
+      --empat-color:#eee;
+      --lima-color:black;
+      --enam-color:rgb(223, 231, 245);
+}
+.dark-mode{
+      --satu-color:black;
+      --dua-color:black;
+      --tiga-color:rgb(24, 23, 23);
+      --empat-color:rgb(28, 27, 27);
+      --lima-color:white;
+      --enam-color:black;
+}
+
 
 /* navbar start */
 nav{
@@ -13,7 +30,7 @@ nav{
       position: sticky;
       width: 100%;
       line-height: 60px;
-      background-color: rgb(127, 171, 243);
+      background-color: var(--satu-color);
       padding: 0 10px;
       top: 0;
       z-index: 999;
@@ -53,10 +70,16 @@ nav{
       transition: .3s;
 }
 .menu ul li a:hover{
-      background-color: black;
+      background-color: var(--lima-color);
       border-radius: 3px;
       padding: 5px;
-      color: #ddd;
+      color: var(--tiga-color);
+}
+img#mode{
+      align-items: center;
+      margin-top: 5px;
+      margin-right: 10px;
+      cursor: pointer;
 }
 .humberger{
       display: none;
@@ -70,7 +93,7 @@ nav{
 }
 .humberger span{
       display: block;
-      background-color: white;
+      background-color: var(--dua-color);
       width: 30px;
       height: 3px;
       border-radius: 5px;
@@ -83,7 +106,7 @@ nav{
 #home{
       margin: auto;
       min-height: 100vh;
-      background-color: #eee;
+      background-color: var(--empat-color);
       background-repeat: no-repeat;
       width: 100%;
 }
@@ -99,10 +122,12 @@ nav{
       margin: auto;
       width: 500px;
       height: 380px;
+      animation: 1s ease-in-out animasi-bersama;
 }
 .deskripsi{
       margin-top: 10vh;
       text-align: center;
+      animation: 1s ease-in-out animasi-deskripsi;
 }
 .nama{
       font-size: 3rem;
@@ -120,13 +145,13 @@ p{
 #profile{
       margin: auto;
       min-height: 100vh;
-      background: rgb(223, 231, 245);
+      background: var(--enam-color);
       background-repeat: no-repeat;
       width: 100%;
 }
 .profile_title{
       font-size: 2rem;
-      color: black;
+      color: var(--lima-color);
       text-transform: uppercase;
       text-align: center;
       padding-top: 20px;
@@ -202,7 +227,7 @@ p{
       height: 150px;
 }
 .contact{
-      background-color: #ddd;
+      background-color: var(--tiga-color);
       margin: 3% 33% 2% 33%;
       text-align: center;
       justify-content: center;
@@ -214,7 +239,7 @@ p{
       transition: .5s;
 }
 .contact:hover{
-      color: black;
+      color: var(--lima-color);
 }
 .img-wa{
       width: 30px;
@@ -229,7 +254,7 @@ span{
       font-weight: bold;
       display: flex;
       flex-direction: column;
-      color: black;
+      color: var(--lima-color);
 }
 
 
@@ -237,7 +262,7 @@ span{
 #myschool{
       width: 100%;
       margin: auto;
-      background-color: #eee;
+      background-color: var(--empat-color);
 }
 a{
       text-decoration: none;
@@ -269,7 +294,7 @@ a{
       border-radius: 10px;
 }
 .deskripsi_school{
-      color: black;
+      color: var(--lima-color);
       margin: 0 20px 50px 20px;
       opacity: 1;
       transition: .3s;
@@ -282,7 +307,7 @@ a{
 }
 .deskripsi_school a:hover{
       text-decoration: none;
-      color: black;
+      color: var(--lima-color);
 }
 .desk_school{
       text-align: center;
@@ -297,7 +322,7 @@ a{
 /* comment */
 .comment{
       min-height: 70vh;
-      background-color: #ddd;
+      background-color: var(--tiga-color);
       padding: 50px;
       margin: 0;
 }
@@ -333,23 +358,45 @@ input{
       margin: auto;
       margin-top: 20px;
       padding: 10px;
-      background-color: #ddd;
+      color: var(--lima-color);
+      background-color: var(--tiga-color);
       border-radius: 8px;
       border: 0;
+      opacity: 1;
       transition: .5s;
 }
 #submit:hover{
-      background-color: #fff;
+      opacity: .5;
 }
 
 /* copyright */
 #copyright{
-      background-color: rgb(127, 171, 243);
+      background-color: var(--satu-color);
       text-align: center;
       padding: 10px;
 }
 .copyright_content{
       color: white;
+}
+@keyframes animasi-deskripsi {
+      0%{
+            transform:translateY(100%);
+            opacity: 0;
+      }
+      100%{
+            transform:translateY(0%);
+            opacity: 1;
+      }
+}
+@keyframes animasi-bersama {
+      0%{
+            transform:translateY(-100%);
+            opacity: 0;
+      }
+      100%{
+            transform:translateY(0%);
+            opacity: 1;
+      }
 }
 @media  screen and (max-width:576px) {
       .menu ul{
@@ -364,7 +411,6 @@ input{
             text-align: center;
             transform: translateX(100%);
             border-radius: 0 0 8px 8px;
-            background-color: rgb(127, 171, 243);
             transition: all 1s;
             opacity: 0;
       }
@@ -409,7 +455,6 @@ input{
             border-radius: 10px;
       }
       .deskripsi_school{
-            color: black;
             text-align: justify;
             font-size: .8rem;
             margin: 0 15px 50px 15px;
@@ -418,8 +463,14 @@ input{
       }
       .nama_school{
             text-decoration: none;
-            color: gray;
             text-transform: uppercase;
             font-size: 2rem;
+      }
+      .comment{
+            padding: 10px;
+      }
+      form{
+            padding: 20px;
+            margin: 5%;
       }
 }

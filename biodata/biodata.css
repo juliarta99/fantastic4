@@ -99,8 +99,10 @@ a.option-profile{
       border-radius: 50%;
       border: 3px solid #ddd;
       position: absolute;
-      top: 0;
-      margin: 8% 42.5%;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 18vh;
 }
 
 /* isi content and medsos */
@@ -197,6 +199,16 @@ tbody tr td{
       opacity: 1;
       transform: scale(1);
 }
+/* copyright */
+#copyright{
+      background-color: rgb(127, 171, 243);
+      text-align: center;
+      padding: 10px;
+      margin-top: 25px;
+}
+.copyright_content{
+      color: white;
+}
 @keyframes animasi-gradient {
       0%{
             background-position: left;
@@ -209,9 +221,6 @@ tbody tr td{
 @media  screen and (max-width:1120px) {
       .title{
             font-size: 18px;
-      }
-      .img-content{
-            margin: 12% 42.5%;
       }
       thead tr th{
             padding: 8px;
@@ -226,9 +235,6 @@ tbody tr td{
       }
 }
 @media  screen and (max-width:750px) {
-      .img-content{
-            margin: 20% 37%;
-      }
       thead tr th{
             padding: 5px;
             font-size: 20px;
@@ -239,10 +245,5 @@ tbody tr td{
       }
       tbody tr td{
             font-size: 10px;
-      }
-}
-@media  screen and (max-width:550px) {
-      .img-content{
-            margin: 20% 31%;
       }
 }
