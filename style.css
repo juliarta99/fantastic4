@@ -291,8 +291,8 @@ a{
 .desk_school:hover .img_school{
       opacity: 1;
       margin: 50px 0 20px 0;
-      width: 600px;
-      height: 300px;
+      width: 500px;
+      height: 250px;
       border-radius: 10px;
 }
 .deskripsi_school{
@@ -398,6 +398,16 @@ textarea{
             opacity: 1;
       }
 }
+@media screen and (max-width:1000px) {
+      #home,
+      #profile,
+      #comment{
+            min-height: auto;
+      }
+      p{
+            margin:0 2vh 5vh 2vh;
+      }
+}
 @media  screen and (max-width:576px) {
       .img_content,
       .card{
@@ -482,5 +492,29 @@ textarea{
       form{
             padding: 20px;
             margin: 5%;
+      }
+}
+@media  screen and (max-width:360px) {
+      .img_content,
+      .card{
+            width: 120px;
+            height: 120px;
+      }
+      p{
+            font-size: .7rem;
+            margin:0 2vh 2vh 2vh;
+      }
+      .profile_title{
+            font-size: 1.7rem;
+      }
+      #profile:hover .profile_title{
+            font-size: 1.5rem;
+      }
+      .underline_profile{
+            width: 270px;
+      }
+      .desk_school:hover .img_school{
+            width: 200px;
+            height: 100px;
       }
 }

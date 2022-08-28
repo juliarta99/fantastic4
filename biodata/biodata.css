@@ -68,6 +68,12 @@ a.option-profile{
       font-weight: bold;
       transition: .5s;
 }
+.pilih a.option-profile:nth-child(2){
+      margin-top: 17px;
+}
+.pilih a.option-profile:nth-child(3){
+      margin-top: 34px;
+}
 .option-profile:hover{
       margin-right: 10px;
       color: rgb(119, 117, 117);
@@ -105,7 +111,7 @@ a.option-profile{
       margin: auto;
       right: 0;
       left: 0;
-      top: 18vh;
+      top: 105px;
       animation: 1.5s ease-in-out animasi-foto;
 }
 
@@ -242,19 +248,10 @@ tbody tr td{
       .title{
             font-size: 18px;
       }
-      thead tr th{
-            padding: 8px;
-            font-size: 25px;
+      .img-content{
+            width: 20vh;
+            height: 20vh;
       }
-      tbody tr th{
-            padding: 7px;
-            font-size: 15px;
-      }
-      tbody tr td{
-            font-size: 12px;
-      }
-}
-@media  screen and (max-width:750px) {
       thead tr th{
             padding: 5px;
             font-size: 20px;
@@ -265,5 +262,78 @@ tbody tr td{
       }
       tbody tr td{
             font-size: 10px;
+      }
+}
+@media  screen and (max-width:560px){
+      .nama{
+            font-size: 18px;
+      }
+      .motto{
+            font-size: 12px;
+      }
+      .member{
+            font-size: 15px;
+      }
+      .pilih a,
+      .motto{
+            font-size: 10px;
+      }
+      .back-home{
+            font-size: 16px;
+      }
+}
+@media  screen and (max-width:360px){
+      .member{
+            font-size: 12px;
+      }
+      .pilih a,
+      .motto{
+            font-size: 8px;
+      }
+      .back-home{
+            font-size: 15px;
+      }
+      .img-back{
+            width: 40px;
+            height: 25px;
+      }
+      .pilih a.option-profile:nth-child(1){
+            margin-top: 0px;
+      }
+      .pilih a.option-profile:nth-child(2){
+            margin-top: 10px;
+      }
+      .pilih a.option-profile:nth-child(3){
+            margin-top: 18px;
+      }
+      .nama{
+            font-size: 15px;
+      }
+      .container{
+            padding: 100px 10px 20px 10px;
+            margin: 0 5%;
+      }
+      .img-content{
+            top: 100px;
+      }
+      .deskripsi{
+            font-size: .8rem;
+      }
+      thead tr th{
+            padding: 3px;
+            font-size: 12px;
+      }
+      tbody tr th{
+            padding: 5px;
+            font-size: 10px;
+      }
+      tbody tr td{
+            font-size: 8px;
+      }
+}
+@media  screen and (max-width:320px){
+      .img-content{
+            width: 28vh;
+            height: 28vh;
       }
 }
