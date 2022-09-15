@@ -1,0 +1,271 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+
+body{
+      font-family: sans-serif;
+      overflow-x: hidden;
+      background-color: #eee;
+}
+:root{
+      --gradient: linear-gradient(160deg, #0093E9 0%, #3b3e3d 100%);
+}
+
+/* navbar start */
+nav{
+      width: 100%;
+      background-color: rgb(0, 20, 51);
+      display: flex;
+      overflow: hidden;
+      padding: 10px;
+      margin: auto;
+}
+.back-home{
+      float: left;
+}
+.img-back{
+      width: 55px;
+      height: 30px;
+}
+.back-home a{
+      text-decoration: none;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      color: #ddd;
+      font-weight: bold;
+      transition: .3s;
+}
+.back-home:hover a{
+      margin-left: 5px;
+      align-items: center;
+}
+.member{
+      width: 100%;
+      text-align: right;
+      overflow: hidden;
+      margin-right: 20px;
+      cursor: pointer;
+      color: #fff;
+      transition: .5s;
+}
+.member:hover{
+      margin-right: 25px;
+}
+.pilih{
+      display: none;
+}
+.pilih.option{
+      display: flex;
+      z-index: 99;
+}
+a.option-profile{
+      text-decoration: none;
+      right: 15px;
+      position: absolute;
+      color: #ddd;
+      font-weight: bold;
+      transition: .5s;
+}
+.option-profile:hover{
+      margin-right: 10px;
+      color: rgb(119, 117, 117);
+}
+/* navbar end */
+
+/* nama and motto */
+.header{
+      background-image: url(../img/pemandangan-malam.jpg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      z-index: -2;
+      padding-bottom: 200px;
+      text-align: center;
+      position: relative;
+} 
+.nama{
+      font-size: 1.5rem;
+      color: #ccc;
+      animation: 1s ease-in-out animasi-nama;
+}
+.motto{
+      font-size: .7rem;
+      color: #ddd;
+      margin-top: 0px;
+      animation: 1s ease-in-out animasi-nama;
+      animation-delay: .5s;
+}
+
+/* foto */
+.img-content{
+      width: 30vh;
+      height: 30vh;
+      border-radius: 50%;
+      border: 3px solid #ddd;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 18vh;
+      animation: 1.5s ease-in-out animasi-foto;
+}
+
+/* isi content and medsos */
+.container{
+      background-color: #fff;
+      padding: 150px 10px 20px 10px;
+      margin: auto;
+      margin: 0 15%;
+      text-align: center;
+      border-radius: 0 0 8px 8px;
+}
+.medsos{
+     margin: auto;
+}
+.medsos ul{
+      list-style-type: none;
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+}
+.medsos ul li a{
+      margin: 0 5px;
+      display: flex;
+      text-decoration: none;
+}
+.medsos-content{
+      width: 30px;
+      height: 30px;
+      opacity: .8;
+      transition: .3s;
+}
+.medsos-content:hover{
+      width: 33px;
+      height: 33px;
+}
+.deskripsi{
+      font-size: 1rem;
+      color: gray;
+}
+
+/* table pendidikan */
+.table-pendidikan{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 20px;
+      background-image: var(--gradient);
+      border-radius: 10px;
+      background-size: 300%;
+}
+.table-pendidikan:hover{
+      animation: animasi-gradient 3s infinite alternate;
+}
+thead tr th{
+      padding: 20px 80px;
+      font-size: 25px;
+      color: #ddd;
+}
+tbody tr th{
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+}
+tbody tr td{
+      font-size: 15px;
+      color: #eaeaea;
+}
+
+/* pendidikan */
+.title{
+      font-size: 1.3rem;
+      color: black;
+      text-align: center;
+      margin-top: 100px;
+      transition: .5s;
+}
+.pendidikan:hover .title{
+      font-size: 1.2rem;
+}
+.underline-title{
+      background-color: gray;
+      width: 280px;
+      height: 3px;
+      border-radius: 3px;
+      margin: auto;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: scale(0);
+      transition: .5s;
+}
+.pendidikan:hover .underline-title{
+      opacity: 1;
+      transform: scale(1);
+}
+/* copyright */
+#copyright{
+      background-color: rgb(127, 171, 243);
+      text-align: center;
+      padding: 10px;
+      margin-top: 25px;
+}
+.copyright_content{
+      color: white;
+}
+@keyframes animasi-nama{
+      0%{
+           transform: translateY(-100%);
+      }
+      100%{
+            transform: translateY(0%);
+      }
+}
+@keyframes animasi-foto{
+      0%{
+           transform: scale(0);
+      }
+      100%{
+            transform: scale(1);
+      }
+}
+@keyframes animasi-gradient {
+      0%{
+            background-position: left;
+      }
+      100%{
+            background-position: right;
+      }
+}
+
+@media  screen and (max-width:1120px) {
+      .title{
+            font-size: 18px;
+      }
+      thead tr th{
+            padding: 8px;
+            font-size: 25px;
+      }
+      tbody tr th{
+            padding: 7px;
+            font-size: 15px;
+      }
+      tbody tr td{
+            font-size: 12px;
+      }
+}
+@media  screen and (max-width:750px) {
+      thead tr th{
+            padding: 5px;
+            font-size: 20px;
+      }
+      tbody tr th{
+            padding: 7px;
+            font-size: 15px;
+      }
+      tbody tr td{
+            font-size: 10px;
+      }
+}

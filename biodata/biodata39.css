@@ -1,0 +1,344 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body{
+      font-family: sans-serif;
+      overflow-x: hidden ;
+      background: url(../img/langitBiru.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+}
+
+/* navbar start */
+nav{
+      width: 100%;
+      background-color: #b20a2c;
+      display: flex;
+      overflow: hidden;
+      padding: 10px;
+      margin: auto;
+}
+.back-home{
+      float: left;
+}
+.img-back{
+      width: 55px;
+      height: 30px;
+}
+.back-home a{
+      text-decoration: none;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      color: #ddd;
+      font-weight: bold;
+      transition: .3s;
+}
+.back-home:hover a{
+      margin-left: 5px;
+      align-items: center;
+}
+.member{
+      width: 100%;
+      text-align: right;
+      overflow: hidden;
+      margin-right: 20px;
+      cursor: pointer;
+      color: #fff;
+      transition: .5s;
+}
+.member:hover{
+      margin-right: 25px;
+}
+.pilih{
+      display: none;
+}
+.pilih.option{
+      display: flex;
+      z-index: 99;
+}
+a.option-profile{
+      text-decoration: none;
+      right: 15px;
+      position: absolute;
+      color: #ddd;
+      font-weight: bold;
+      transition: .5s;
+}
+.pilih a.option-profile:nth-child(2){
+      margin-top: 17px;
+}
+.pilih a.option-profile:nth-child(3){
+      margin-top: 34px;
+}
+.option-profile:hover{
+      margin-right: 10px;
+      color: rgb(119, 117, 117);
+}
+/* navbar end */
+
+/* header start*/
+.header{
+      background-color: #b20a2c;
+      z-index: -2;
+      padding-bottom: 100px;
+      text-align: center;
+      position: relative;
+}
+.nama{
+      font-size: 1.5rem;
+      color: #ccc;
+      animation: 1s ease-in-out animasi-nama;
+}
+.motto{
+      font-size: .7rem;
+      color: #ddd;
+      margin-top: 0px;
+      animation: 1s ease-in-out animasi-nama;
+      animation-delay: .5s;
+}
+/* header end */
+
+/* foto */
+.img-content{
+      width: 30vh;
+      height: 30vh;
+      border-radius: 50%;
+      border: 3px solid #ddd;
+      position: absolute;
+      margin: auto;
+      right: 0;
+      left: 0;
+      top: 105px;
+      animation: 1.5s ease-in-out animasi-foto;
+}
+/* foto end */
+
+/* deskripsi and medsos start */
+.container{
+      background-color: #fff;
+      padding: 150px 10px 20px 10px;
+      margin: auto;
+      margin: 0 15%;
+      text-align: center;
+      border-radius: 0 0 8px 8px;
+}
+.medsos{
+     margin: auto;
+}
+.medsos ul{
+      list-style-type: none;
+      display: flex;
+      margin-bottom: 10px;
+      justify-content: center;
+      align-items: center;
+}
+.medsos ul li a{
+      margin: 0 5px;
+      display: flex;
+      text-decoration: none;
+}
+.medsos-content{
+      width: 30px;
+      height: 30px;
+      opacity: .8;
+      transition: .3s;
+}
+.medsos-content:hover{
+      width: 33px;
+      height: 33px;
+}
+.deskripsi{
+      font-size: 1rem;
+      color: gray;
+}
+/* deskripsi dan medsos end*/
+
+/* table pendidikan */
+.table-pendidikan{
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 20px;
+      backdrop-filter: blur(2000px);
+      border-radius: 10px;
+      background-size: 300%;
+}
+.table-pendidikan:hover{
+      animation: animasi-gradient 3s infinite alternate;
+}
+thead tr th{
+      padding: 20px 80px;
+      font-size: 25px;
+      color: whitesmoke;
+}
+tbody tr th{
+      padding: 10px;
+      font-size: 20px;
+      color: white;
+}
+tbody tr td{
+      font-size: 15px;
+      color: white;
+}
+.title{
+      font-size: 1.3rem;
+      color: #b20a2c;
+      text-align: center;
+      margin-top: 100px;
+      transition: .5s;
+}
+.pendidikan:hover .title{
+      font-size: 1.2rem;
+}
+.underline-title{
+      background-color: gray;
+      width: 280px;
+      height: 3px;
+      border-radius: 3px;
+      margin: auto;
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: scale(0);
+      transition: .5s;
+}
+.pendidikan:hover .underline-title{
+      opacity: 1;
+      transform: scale(1);
+}
+/* tabel pendidikan end */
+
+/* copyright */
+#copyright{
+      background-color: #b20a2c;
+      text-align: center;
+      padding: 10px;
+      margin-top: 25px;
+}
+.copyright_content{
+      color: white;
+}
+/* copyright end */
+
+/* animasi */
+@keyframes animasi-nama{
+      0%{
+           transform: translateY(-100%);
+      }
+      100%{
+            transform: translateY(0%);
+      }
+}
+@keyframes animasi-foto{
+      0%{
+           transform: scale(0);
+      }
+      100%{
+            transform: scale(1);
+      }
+}
+/* animasi end */
+
+/* responsif */
+@media  screen and (max-width:1120px) {
+      body{
+            background-size: 150%;
+      }
+      .title{
+            font-size: 18px;
+      }
+      .img-content{
+            width: 20vh;
+            height: 20vh;
+      }
+      thead tr th{
+            padding: 5px;
+            font-size: 20px;
+      }
+      tbody tr th{
+            padding: 7px;
+            font-size: 15px;
+      }
+      tbody tr td{
+            font-size: 10px;
+      }
+}
+@media  screen and (max-width:560px){
+      body{
+            background-size: 200%;
+      }
+      .nama{
+            font-size: 18px;
+      }
+      .motto{
+            font-size: 12px;
+      }
+      .member{
+            font-size: 15px;
+      }
+      .pilih a,
+      .motto{
+            font-size: 10px;
+      }
+      .back-home{
+            font-size: 16px;
+      }
+      thead tr th{
+            padding: 3px;
+            font-size: 12px;
+      }
+      tbody tr th{
+            padding: 5px;
+            font-size: 10px;
+      }
+      tbody tr td{
+            font-size: 8px;
+      }
+}
+@media  screen and (max-width:360px){
+      .member{
+            font-size: 12px;
+      }
+      .pilih a,
+      .motto{
+            font-size: 8px;
+      }
+      .back-home{
+            font-size: 15px;
+      }
+      .img-back{
+            width: 40px;
+            height: 25px;
+      }
+      .pilih a.option-profile:nth-child(1){
+            margin-top: 0px;
+      }
+      .pilih a.option-profile:nth-child(2){
+            margin-top: 10px;
+      }
+      .pilih a.option-profile:nth-child(3){
+            margin-top: 18px;
+      }
+      .nama{
+            font-size: 15px;
+      }
+      .container{
+            padding: 100px 10px 20px 10px;
+            margin: 0 5%;
+      }
+      .img-content{
+            top: 100px;
+      }
+      .deskripsi{
+            font-size: .8rem;
+      }
+}
+@media  screen and (max-width:320px){
+      .img-content{
+            width: 28vh;
+            height: 28vh;
+      }
+}
+/* responsif end */

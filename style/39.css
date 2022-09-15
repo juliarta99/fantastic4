@@ -1,0 +1,493 @@
+*{
+      margin: 0;
+      padding: 0;
+}
+body{
+      font-family: sans-serif;
+      overflow-x: hidden;
+      background: var(--satu-color);
+}
+/* variabel */
+:root{ 
+      --satu-color:linear-gradient(to right, #ef8398, #b20a2c);
+      --dua-color:#434343;
+      --tiga-color:#ef8398;
+      --link-color:#ef8398;
+      --hover-link:white;
+}
+.dark-mode{
+      --satu-color:linear-gradient(to right, #434343 0%, black 100%);
+      --dua-color:white;
+      --tiga-color:#434343;
+      --link-color:white;
+      --hover-link:#ef8398;
+}
+/* variabel end */
+/* navbar start */
+nav{
+      display: flex;
+      position: sticky;
+      width: 100%;
+      line-height: 60px;
+      padding: 0 10px;
+      backdrop-filter: blur(10px);
+      top: 0;
+      z-index: 999;
+      animation: 2s ease-out animasi-upDown;
+}
+.header{
+      width: 100%;
+}
+.logo a{
+      text-decoration: none;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: #fffbd5;
+      text-shadow: 1px .7px 1px #ef8398;
+      float: left;
+      opacity: 1;
+      animation: 2s ease-out animasi-upDown;
+      animation-delay: .5s;
+      transition: .3s;
+}
+.logo a b{
+      color: #ef8398;
+}
+.logo a:hover{
+      opacity: .7;
+}
+.menu{
+      float: right;
+}
+.menu ul{
+      list-style-type: none;
+}
+.menu ul li{
+      float: left;
+}
+.menu ul li a{
+      text-decoration: none;
+      margin-right: 20px;
+      color: var(--link-color);
+      font-size: 1rem;
+      transition: .3s;
+}
+.menu ul li a:hover{
+      border: 1px;
+      padding: 5px;
+      color: var(--hover-link);
+}
+#mode{
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin-top: 7px;
+      margin-right: 20px;
+      cursor: pointer;
+}
+.humberger{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin: 15px;
+      right: 0;
+      justify-content: space-between;
+      height: 20px;
+      position: relative;
+}
+.humberger span{
+      display: block;
+      background-color: white;
+      width: 30px;
+      height: 3px;
+      border-radius: 5px;
+      transition: .3s;
+}
+/* navbar end */
+
+/* home start */
+#home{
+      min-height: 100vh;
+}
+.hero{
+      display: flex;
+      position: relative;
+      margin: auto;
+      width: 100%;
+      align-items: center;
+}
+.deskripsi{
+      margin: 0 20px;
+      animation: 2s ease-out animasi-upDown;
+}
+.nama{
+      color: #b20a2c;
+      font-weight: bold;
+      font-size: 40px;
+}
+p{
+      color: aliceblue;
+      font-size: 15px;
+}
+.foto-bersama{
+      width: 800px;
+      height: 400px;
+      margin-left: 20px; 
+      animation: 2s ease-in-out animasi-foto; 
+}
+/* home end */
+
+/* profile start */
+#profile{
+      min-height: 100vh;
+}
+.profile_title{
+      font-size: 40px;
+      color: #ef8398;
+      text-align: center;
+      transition: .5s;
+}
+.underline_profile{
+      width: 350px;
+      height: 3px;
+      background-color:#b20a2c;
+      margin: auto;
+      opacity: 0;
+      transform: scale(0);
+      transition: .5s;
+}
+#profile:hover .profile_title{
+      font-size: 35px;
+}
+#profile:hover .underline_profile{
+      transform: scale(1);
+      opacity: 1;
+}
+.profile{
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+.card{
+      display: flexbox;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      backdrop-filter: blur(2000px);
+      transition: 1s;
+}
+.card:hover{
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 10px;
+}
+.profile_content{
+      display: flexbox;
+      opacity: 0;
+      overflow: hidden;
+      font-size: 0px;
+      transition-delay: .5s;
+      transition: 1s;
+}
+.card:hover .profile_content{
+      font-size: 1rem;
+      opacity: 1;
+}
+.img_content{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: relative;
+      transition-delay: .5s;
+      transition: 1s;
+}
+.card:hover .img_content{
+      width: 150px;
+      height: 150px;
+}
+.contact{
+      background-color: #ef8398;
+      margin: 3% 33% 2% 33%;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      display: none;
+      padding: 5px 0;
+      color: #fff;
+      border-radius: 5px;
+      transition: .5s;
+}
+.contact:hover{
+      color: white;
+}
+.img-wa{
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+}
+.card:hover .contact{
+      display: flex;
+}
+span{
+      margin-top: 5%;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      color: #ef8398;
+}
+/* profile end */
+
+/* myschool start */
+#myschool{
+      min-height: auto;
+}
+.school{
+      width: 100%;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+}
+.desk_school{
+      display: flex;
+      position: relative;
+      flex-direction: column;
+}
+.img_school{
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      border-radius: 10px;
+      box-shadow: 3px 2px 10px var(--tiga-color);
+      border: 2px solid var(--tiga-color);
+      transition: 1s;
+}
+.desk_school:hover .img_school{
+      width: 500px;
+      height: 250px;
+      opacity: 1;
+}
+.nama_school{
+      color: #b20a2c;
+      font-size: 40px;
+      margin-top: 20px;
+}
+.deskripsi_school{
+      font-size: 15px;
+      color: #fffbd5;
+      margin: 0 23px;
+}
+/* comment */
+.comment{
+      padding: 50px;
+      margin: 0;
+}
+form{
+      padding: 40px;
+      backdrop-filter: blur(2000px);
+      display: flex;
+      flex-direction: column;
+      color: var(--dua-color);
+      margin: auto;
+      margin: 0 10%;
+      border-radius: 10px;
+}
+.title-comment{
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+}
+.lbl{
+      margin-top: 30px;
+      font-size: 15px;
+}
+input,
+textarea{
+      padding: 7px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: 0;
+}
+#submit{
+      width: 150px;
+      margin: auto;
+      margin-top: 20px;
+      padding: 10px;
+      color: #ddd;
+      background-color: var(--tiga-color);
+      border-radius: 8px;
+      border: 0;
+      opacity: 1;
+      transition: .5s;
+}
+#submit:hover{
+      opacity: .5;
+}
+
+/* copyright */
+#copyright{
+      background-color: var(--tiga-color);
+      text-align: center;
+      padding: 10px;
+}
+.copyright_content{
+      color: white;
+}
+/* animasi */
+@keyframes animasi-foto {
+      0%{
+            transform: translateX(-100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateX(0%);
+            opacity: 1;
+      }
+}
+@keyframes animasi-upDown {
+      0%{
+            transform: translateY(-100%);
+            opacity: 0;
+      }
+      100%{
+            transform: translateY(0%);
+            opacity: 1;
+      }
+}
+/* responsif */
+@media screen and (max-width:1000px) {
+      #home,
+      #profile,
+      #comment{
+            min-height: auto;
+      }
+      p{
+            margin:0 2vh 5vh 2vh;
+      }
+}
+@media  screen and (max-width:576px) {
+      .img_content,
+      .card{
+            width: 160px;
+            height: 160px;
+      }
+      .foto-bersama{
+            width: 300px;
+            height: 190px;
+      }
+      .menu ul{
+            display: flex;
+            flex-direction: column;
+            right: 0;
+            position: absolute;
+            margin-top: 50px;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            transform: translateX(100%);
+            background: var(--satu-color);
+            border-radius: 0 0 8px 8px;
+            transition: all 1s;
+            opacity: 0;
+      }
+      .menu ul.slide{
+            transform: translateX(0);
+            opacity: 1;
+      }
+      .humberger.slide span:nth-child(1){
+            transform: translateY(7px) rotate(45deg);
+      }
+      .humberger.slide span:nth-child(3){
+            transform: translateY(-8px) rotate(-45deg);
+      }
+      .humberger.slide span:nth-child(2){
+            transform: scale(0);
+      }
+      .humberger{
+            display: flex;
+            float: right;
+      }
+      .hero{
+            flex-direction: column;
+      }
+      .nama{
+            text-align: center;
+      }
+      .contact{
+            margin: 3%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: none;
+            padding: 5px 0;
+            border-radius: 5px;
+            transition: .5s;
+      }
+      span{
+            font-size: 10px;
+      }
+      .desk_school{
+            margin-top: 5vh;
+      }
+      .desk_school:hover .img_school{
+            opacity: 1;
+            margin: 50px 0 20px 0;
+            width: 400px;
+            height: 200px;
+            border-radius: 10px;
+      }
+      .deskripsi_school{
+            text-align: justify;
+            font-size: .8rem;
+            margin: 0 15px 50px 15px;
+            opacity: 1;
+            transition: .3s;
+      }
+      .nama_school{
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 2rem;
+      }
+      .comment{
+            padding: 10px;
+      }
+      form{
+            padding: 20px;
+            margin: 5%;
+      }
+}
+@media  screen and (max-width:360px) {
+      .img_content,
+      .card{
+            width: 120px;
+            height: 120px;
+      }
+      p{
+            font-size: .7rem;
+            margin:0 2vh 2vh 2vh;
+      }
+      .profile_title{
+            font-size: 1.7rem;
+      }
+      #profile:hover .profile_title{
+            font-size: 1.5rem;
+      }
+      .underline_profile{
+            width: 270px;
+      }
+      .desk_school:hover .img_school{
+            width: 200px;
+            height: 100px;
+      }
+}
