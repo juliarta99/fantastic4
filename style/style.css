@@ -410,6 +410,9 @@ textarea{
       }
 }
 @media  screen and (max-width:576px) {
+      .foto_bersama{
+            margin-top:50px;
+      }
       .img_content,
       .card{
             width: 160px;
