@@ -497,6 +497,9 @@ textarea{
       }
 }
 @media  screen and (max-width:360px) {
+      .card:hover .profile_content{
+            font-size: .6rem;
+      }
       .img_content,
       .card{
             width: 120px;
