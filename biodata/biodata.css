@@ -1,11 +1,11 @@
 *{
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
 }
 
 body{
       font-family: sans-serif;
-      overflow-x: hidden;
       background-color: #eee;
 }
 :root{
@@ -248,6 +248,10 @@ tbody tr td{
       .title{
             font-size: 18px;
       }
+      .img-back{
+            width: 70px;
+            height: 25px;
+      }
       .img-content{
             width: 20vh;
             height: 20vh;
@@ -265,6 +269,17 @@ tbody tr td{
       }
 }
 @media  screen and (max-width:560px){
+      thead tr th{
+            padding: 4px;
+            font-size: 15px;
+      }
+      tbody tr th{
+            padding: 6px;
+            font-size: 12px;
+      }
+      tbody tr td{
+            font-size: 8px;
+      }
       .nama{
             font-size: 18px;
       }
@@ -294,8 +309,8 @@ tbody tr td{
             font-size: 15px;
       }
       .img-back{
-            width: 40px;
-            height: 25px;
+            width: 60px;
+            height: 22px;
       }
       .pilih a.option-profile:nth-child(1){
             margin-top: 0px;

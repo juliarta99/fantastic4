@@ -27,7 +27,7 @@ body{
 /* navbar start */
 nav{
       display: flex;
-      position: sticky;
+      position: fixed;
       width: 100%;
       line-height: 60px;
       background-color: var(--satu-color);
@@ -415,6 +415,7 @@ textarea{
             height: 160px;
       }
       .foto-bersama{
+            margin-top: 50px;
             width: 300px;
             height: 190px;
       }
@@ -500,8 +501,15 @@ textarea{
             width: 120px;
             height: 120px;
       }
+      .card:hover .img_content{
+            width: 100px;
+            height: 100px;
+      }
+      .deskripsi_school{
+            font-size: .6rem;
+      }
       p{
-            font-size: .7rem;
+            font-size: .6rem;
             margin:0 2vh 2vh 2vh;
       }
       .profile_title{
