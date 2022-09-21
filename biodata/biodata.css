@@ -45,13 +45,13 @@ nav{
       width: 100%;
       text-align: right;
       overflow: hidden;
-      margin-right: 20px;
+      margin-right: 25px;
       cursor: pointer;
       color: #fff;
       transition: .5s;
 }
 .member:hover{
-      margin-right: 25px;
+      margin-right: 20px;
 }
 .pilih{
       display: none;
@@ -62,7 +62,7 @@ nav{
 }
 a.option-profile{
       text-decoration: none;
-      right: 15px;
+      right: 10px;
       position: absolute;
       color: #ddd;
       font-weight: bold;
@@ -250,7 +250,7 @@ tbody tr td{
       }
       .img-back{
             width: 70px;
-            height: 25px;
+            height: 23px;
       }
       .img-content{
             width: 20vh;
@@ -310,7 +310,7 @@ tbody tr td{
       }
       .img-back{
             width: 60px;
-            height: 22px;
+            height: 20px;
       }
       .pilih a.option-profile:nth-child(1){
             margin-top: 0px;

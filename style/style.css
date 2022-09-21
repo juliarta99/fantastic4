@@ -3,8 +3,8 @@
       padding: 0;
 }
 body{
-      font-family: sans-serif;
       overflow-x: hidden;
+      font-family: sans-serif;
 }
 :root{
       --satu-color:rgb(127, 171, 243);
@@ -425,7 +425,7 @@ textarea{
             right: 0;
             position: absolute;
             margin-top: 45px;
-            z-index: -999;
+            z-index: -99;
             width: 100%;
             height: auto;
             text-align: center;
