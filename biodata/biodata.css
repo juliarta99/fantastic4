@@ -52,7 +52,7 @@ nav{
       transition: .5s;
 }
 .member:hover{
-      margin-right: 25px;
+      margin-right: 5px;
 }
 .pilih{
       display: none;
