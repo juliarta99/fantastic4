@@ -9,7 +9,7 @@ body{
       background-color: #eee;
 }
 :root{
-      --gradient: linear-gradient(160deg, #0093E9 0%, #3b3e3d 100%);
+      --gradient: linear-gradient(160deg, #0093E9 0%, #b5a2d6 100%);
 }
 
 /* navbar start */
